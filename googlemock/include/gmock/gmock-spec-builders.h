@@ -1840,7 +1840,7 @@ inline const T& Const(const T& x) { return x; }
 
 // Constructs an Expectation object that references and co-owns exp.
 inline Expectation::Expectation(internal::ExpectationBase& exp)  // NOLINT
-    : expectation_base_(exp.GetHandle().expectation_base()) {}
+    : expectation_base_(exp->GetHandle().expectation_base()) {}
 
 }  // namespace testing
 
